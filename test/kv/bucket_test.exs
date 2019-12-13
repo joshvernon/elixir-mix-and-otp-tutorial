@@ -21,4 +21,8 @@ defmodule KV.Bucketest do
   test "deletes non-existent key", %{bucket: bucket} do
     assert KV.Bucket.delete(bucket, "spam") == nil
   end
+
+  test "are temporary workers" do
+    assert Supervisor.child_spec(KV.Bucket, []).restart == :temporary
+  end
 end
