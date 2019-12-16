@@ -1,4 +1,4 @@
-defmodule KV.Bucketest do
+defmodule KV.BucketTest do
   use ExUnit.Case, async: true
 
   setup do
