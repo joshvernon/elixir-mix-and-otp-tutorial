@@ -18,6 +18,6 @@ jobs:
         mix local.hex --force
         mix deps.get
     - name: Run Tests
-      run: mix test
+      run: PORT=4040 mix test
     - name: Check Formatting
       run: mix format --check-formatted
